@@ -48,7 +48,7 @@ def vote(request, question_id):
                 "error_message": "Вы не сделали никакого выбора.",
             },
         )
-    else:
-        selected_choice.votes = F("votes") + 1
-        selected_choice.save()
+
+    selected_choice.votes = F("votes") + 1
+    selected_choice.save()
     return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
