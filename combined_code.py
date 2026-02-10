@@ -127,4 +127,4 @@ def main(path=None) -> None:
 if __name__ == "__main__":
     # None | "app/ws" | "app/ws/handlers.py"
     # main('app/services')
-    main("apps/package")
+    main()
